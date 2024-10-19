@@ -97,7 +97,7 @@ jobs:
           repository: benlei/internal-issues
           token: ${{ steps.app-token.outputs.token }}
           title: 'Issue with example contents'
-          labels: 'documentation'
+          labels: documentation, bug
 
       - name: Body check
         if: ${{ !contains(steps.test-action.outputs.body, '1235768457246') }}
