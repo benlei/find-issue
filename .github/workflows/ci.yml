@@ -45,7 +45,7 @@ jobs:
         run: npm run ci-test
 
   test-action-by-number:
-    name: GitHub Actions Test
+    name: GitHub Actions Test by Number
     runs-on: ubuntu-latest
 
     steps:
@@ -75,7 +75,7 @@ jobs:
         run: exit 1
 
   test-action-by-title:
-    name: GitHub Actions Test
+    name: GitHub Actions Test by Title
     runs-on: ubuntu-latest
 
     steps:
