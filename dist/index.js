@@ -32642,7 +32642,11 @@ const issueLabels = () => {
     if (labelsInput().length === 0) {
         return undefined;
     }
-    return labelsInput();
+    return labelsInput()
+        .split(',')
+        .map(label => label.trim())
+        .filter(v => v)
+        .join(',');
 };
 const filterOptions = () => ({
     state: issueState(),
