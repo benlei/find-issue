@@ -35,6 +35,10 @@ export const issueLabels = (): string | undefined => {
   }
 
   return labelsInput()
+    .split(',')
+    .map(label => label.trim())
+    .filter(v => v)
+    .join(',')
 }
 
 export const filterOptions = (): IssuesAdditionalQueryOptions => ({

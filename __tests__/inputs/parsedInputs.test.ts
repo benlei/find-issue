@@ -68,6 +68,11 @@ describe('issueLabels', () => {
     vi.spyOn(inputs, 'labelsInput').mockReturnValue('')
     expect(issueLabels()).toBeUndefined()
   })
+
+  it('should remove all whitespaces', () => {
+    vi.spyOn(inputs, 'labelsInput').mockReturnValue('foo, bar,   ,  baz')
+    expect(issueLabels()).toBe('foo,bar,baz')
+  })
 })
 
 describe('filterOptions', () => {
